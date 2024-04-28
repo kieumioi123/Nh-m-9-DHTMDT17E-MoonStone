@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/2a15cf01-c848-4da5-884f-bf8b4b4783b8/logo%20mtt.png?v=1711883764370" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <title>MoonStone Team</title>
+</head>
+
+<body>
+<header>
+<div class="navbar">
+<nav class="navbar-header">
+  <div class="header-menu">
+    <a href="https://cyan-florentine-ginger.glitch.me/">
+       <img class="logo-team" src="https://cdn.glitch.global/c2c72d3d-385b-4ce0-afb8-3225dc1ee39c/logo%20mtt%201.png?v=1712059288320" alt="" title="Moonstone Team" width="100%" height="58px">
+    </a>
+    <div class="header-menu-name">
+      <ul>
+        <li><a href="https://cyan-florentine-ginger.glitch.me/"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
+        <li><a href="https://efficient-crocus-guardian.glitch.me/">Danh Sách Truyện</a></li>
+        <li><a href="https://sprout-scintillating-dart.glitch.me/" id="triggerDiv">Thể Loại</a></li>
+        <li><a href="https://scented-mire-mandrill.glitch.me/">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <div class="header-menu-items">
+      <div class="search-item" onclick="toggleSearch()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="search-box" id="search-box">
+    		  <input type="text" placeholder="Tìm kiếm truyện..."/>
+    		  <input type="button" value="Tìm kiếm"/>
+  		  </div>
+      </div>
+      <div class="notification">
+        <div id="notificationBell" class="fa-solid fa-bell"></div>
+        <div id="notificationBox" class="notification-box"></div>        
+      </div>
+      <div class="login-list" onclick="toggleMenu()">
+        <i class="fa-solid fa-list"></i>
+      </div>
+    </div>
+  </div>
+  <div class="sub-menu-wrap" id="sub-menu-wrap">
+    <div class="sub-menu">
+      <div class="list-info">
+        <a href="https://cyan-florentine-ginger.glitch.me/" class="sub-menu-link">
+          <i class="fa-solid fa-house"></i> 
+          <p>Trang Chủ</p>
+        </a>
+        <a href="https://balsam-stone-cicada.glitch.me/" class="sub-menu-link">
+          <p>Tin Tức</p>
+        </a>
+        <a href="https://boom-spring-owl.glitch.me/" class="sub-menu-link">
+          <p>Bảng Xếp Hạng</p>
+        </a>
+        <a href="https://efficient-crocus-guardian.glitch.me/" class="sub-menu-link">
+          <p>Danh Sách Truyện</p>
+        </a>
+        <a href="https://mangrove-coconut-wilderness.glitch.me/" class="sub-menu-link">
+          <p>Đã Hoàn Thành</p>
+        </a>
+        <button class="btnLogin-popup">
+          <p>Đăng Nhập</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="login-wrapper-container">
+  <div class="login-wrapper">
+    <span class="icon-close">
+      <i class="fa-solid fa-xmark"></i>
+    </span>
+    
+    <div class="form-box login">
+      <h4>
+        Đăng Nhập
+      </h4>
+      <form action="#">
+        <div class="input-box">
+          <label>Tên người dùng hoặc Địa chỉ Email</label>
+          <span class="icon-login"><i class="fa-solid fa-user"></i></span>
+          <input type="Tên đăng nhập" placeholder="Tên đăng nhập" required>
+        </div>
+        <div class="input-box">
+          <label>Mật khẩu</label>
+          <span class="icon-login"><i class="fa-solid fa-lock"></i></span>
+          <input type="Mật khẩu" placeholder="Mật khẩu" required>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox">Tự động đăng nhập</label>
+          <a href="#">Quên mật khẩu?</a>
+        </div>
+        <button type="submit" class="login-btn">
+          Đăng nhập
+        </button>
+        <div class="login-register">
+          <p> Bạn chưa có tài khoản?
+            <a href="#" class="register-link">Đăng ký</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    
+    <div class="form-box register">
+      <h4>
+        Đăng Ký
+      </h4>
+      <form action="#">
+        <div class="input-box">
+          <label>Tên đăng nhập</label>
+          <span class="icon-login"><i class="fa-solid fa-user"></i></span>
+          <input type="Tên đăng nhập" placeholder="Tên đăng nhập" required>
+        </div>
+        <div class="input-box">
+          <label>Email</label>
+          <span class="icon-login"><i class="fa-solid fa-envelope"></i></span>
+          <input type="Email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+          <label>Mật khẩu</label>
+          <span class="icon-login"><i class="fa-solid fa-lock"></i></span>
+          <input type="Mật khẩu" placeholder="Mật khẩu" required>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox">Tôi đồng ý các chính sách và điều khoản</label>
+        </div>
+        <button type="submit" class="login-btn">
+          Đăng ký
+        </button>
+        <div class="login-register">
+          <p> Bạn đã có tài khoản?
+            <a href="#" class="login-link">Đăng nhập</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>   
+  </div>
+  <div class="gender-list" id="hiddenDiv">
+      <div class="tags-header">
+              <a href="">15+</a>
+              <a href="">Romance</a>
+              <a href="">Comedy</a>
+              <a href="">Comic</a>
+              <a href="">Isekai</a>
+              <a href="">Shoujo</a>
+              <a href="">Shounen</a>
+              <a href="">Seinen</a>
+              <a href="">Manga</a>
+              <a href="">Slice Of Life</a>
+              <a href="">Supernatural</a>
+              <a href="">Fantasy</a>
+              <a href="">Drama</a>
+              <a href="">Harem</a>
+              <a href="">Romance Comedy</a>
+              <a href="">School Life</a>
+              <a href="">Yandere</a>
+              <a href="">Historical</a>
+              <a href="">Mystery</a>
+              <a href="">Adventure</a>
+              <a href="">Gender Bender</a>
+              <a href="">Manhua</a>
+              <a href="">Bí Ẩn</a>
+              <a href="">Chuyển Sinh</a>
+              <a href="">Hoàng Gia</a>
+              <a href="">Huyễn Huyền</a>
+              <a href="">Lãng Mạn</a>
+              <a href="">Tình Cảm</a>
+              <a href="">BL</a>
+              <a href="">Học Đường</a>
+              <a href="">Xuyên Không</a>
+              <a href="">Tái Sinh</a>
+              <a href="">Siêu Năng Lực</a>
+              <a href="">Phép Thuật</a>
+              <a href="">Đam Mỹ</a>
+              <a href="">Bách Hợp</a>
+              <a href="">Hoán Đổi Thân Xác</a>
+              <a href="">Hiện Đại</a>
+              <a href="">Cổ Trang</a>
+              <a href="">Yaoi</a>
+              <a href="">Yuri</a>
+        </div>
+  </div>
+</nav> 
+</div>  
+<div class="banner">
+ <div class="slide-container"> 
+  <div class="buttons">
+		<span class="next"></span>
+		<span class="prev"></span>
+	</div>
+ </div>
+</div>
+</header>
+
+<section class="container">
+  <div class="link-menu">
+    <ul>
+      <li><a href="https://cyan-florentine-ginger.glitch.me/"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+      <li>/</li>
+      <li><a href="https://efficient-crocus-guardian.glitch.me/">Danh sách truyện</a></li>
+      <li>/</li>
+      <li><a href="https://cautious-rhinestone-anaconda.glitch.me/">Trường Nội Trú Của Mao</a></li>
+    </ul>
+  </div>
+  <div class="information">
+    <div>
+      <img class="image" src="https://cdn.glitch.global/2a15cf01-c848-4da5-884f-bf8b4b4783b8/Mao.jpeg?v=1710663189234">
+      <div class="follow">
+        <button class="follow-btn" id="follow-btn1" onclick="toggleFollow(1)">Theo dõi</button>
+        <span id="followCount1" class="followCount" >0</span> theo dõi
+      </div>
+    </div>
+    <div class="ìn4">
+      <h1 class="name">
+        Trường Nội Trú Của Mao
+      </h1>
+      <div class="stars" id="starRating">
+        <a id="star-1" class="star" onclick="rateStar(1)">&#9733;</a>
+        <a id="star-2" class="star" onclick="rateStar(2)">&#9733;</a>
+        <a id="star-3" class="star" onclick="rateStar(3)">&#9733;</a>
+        <a id="star-4" class="star" onclick="rateStar(4)">&#9733;</a>
+        <a id="star-5" class="star" onclick="rateStar(5)">&#9733;</a>
+      </div>
+      <div>
+        <b>Tên gốc: </b>Mao no Kishuku Gakkou, Mao’s Boarding School
+      </div>
+      <div>
+        <b>Tác giả: </b>Anzai Karin
+      </div>
+      <div class="tags-header">
+        <b>Thể loại: </b>
+        <a href="">Shoujo</a>
+        <a href="">School Life</a>
+        <a href="">Comedy</a>
+      </div>
+      <div>
+        <b>Tình trạng: </b>Đang tiến hành
+      </div>
+      <div>
+        <b>Tổng lượt xem: </b><span class="visit" id="visitCount">0</span>
+      </div>
+      <div>
+        <b>Đánh giá: </b><p class="visit"><span id="ratingValue">0</span> &#9733;</p>
+      </div>
+    </div>
+    <div>
+      <h1>
+        Giới thiệu
+      </h1><br>
+      <div>
+        Mao, một cậu trai thích cây cối và luôn cô độc một mình, đã được ghi danh vào Học viện Eiou danh giá (viết tắt là Ougaku)! Cậu ấy làm bạn với Louis, người bạn cùng phòng của mình, và bắt đầu một mối tình lãng mạn với một người đẹp bí ẩn.
+      </div>
+    </div><br>
+  </div>
+  <div class="chapter">
+    DANH SÁCH CHƯƠNG
+  </div>
+  <div class="table-chapter">
+      <table class="table-in4">
+        <thead>
+          <tr class="table-head">
+            <th><img width="20px" height="20px" src="https://cdn.glitch.global/3d003f97-a3d9-46e2-8c33-e61638ee9ad0/imgicom.png?v=1712850957410"></th>
+            <th>Chương</th>
+            <th>Ngày đăng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-body">
+            <td class="table-img"><img width="100px" height="150px" src="https://cdn.glitch.global/5928da83-5b16-42c4-bc6e-8891a79dca1b/chap%202.jpg?v=1712933635367"></td>
+            <td><a class="table-chap" href="https://wise-discovered-archduke.glitch.me/">Trường Nội Trú Của Mao - chap 2</a></td>
+            <td class="update-day">12/4/2024</td>
+          </tr>
+          <tr class="table-body">
+            <td class="table-img"><img width="100px" height="150px" src="https://cdn.glitch.global/5928da83-5b16-42c4-bc6e-8891a79dca1b/chap1.jpg?v=1712933736496"></td>
+            <td><a class="table-chap" href="https://tiny-handsome-marjoram.glitch.me/">Trường Nội Trú Của Mao - chap 1</a></td>
+            <td class="update-day">12/4/2024</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="chapter">
+    THẢO LUẬN
+    </div>
+  <div class="comment-body">
+    <form id="comment-form">
+        <div>
+            <input placeholder="Tên của bạn" type="text" id="username" name="username">
+        </div>
+        <div class="your-comment">
+          <textarea class="comment-text" placeholder="Bình luận của bạn" id="commentText" name="comment" style="height: 60px !important;"></textarea>
+          <button type="submit" class="submit-button"></button>
+        </div>
+    </form>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const commentForm = document.getElementById('comment-form');
+        const commentContainer = document.getElementById('comment-container');
+
+        // Function to display comments
+        function displayComments() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            commentContainer.innerHTML = '';
+            comments.forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+                commentDiv.innerHTML = `
+                    <img src="https://cdn.glitch.global/3d003f97-a3d9-46e2-8c33-e61638ee9ad0/avatar%20icon.jpg?v=1712930925563" alt="Avatar" class="avatar"> 
+                    <div>
+                        <p><strong>${comment.username}:</strong> ${comment.text}</p>
+                    </div>
+                `;
+                commentContainer.appendChild(commentDiv);
+            });
+        }
+
+        // Display comments when page loads
+        displayComments();
+
+        // Event listener for form submission
+        commentForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get username and comment text from form
+            const username = document.getElementById('username').value;
+            const commentText = document.getElementById('commentText').value;
+
+            // Add comment to local storage
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push({ username, text: commentText });
+            localStorage.setItem('comments', JSON.stringify(comments));
+
+            // Display comments
+            displayComments();
+
+            // Reset form fields
+            document.getElementById('username').value = '';
+            document.getElementById('commentText').value = '';
+        });
+    });
+    </script>
+    <div class="comment-container" id="comment-container"></div>
+  </div>
+</section>
+<script>
+    let currentRating = 0;
+    let totalStars = 0;
+    let ratingCount = 0;
+
+    // Kiểm tra xem có kết quả được lưu trữ trong Local Storage không
+    if(localStorage.getItem('ratingValue') !== null) {
+        currentRating = parseFloat(localStorage.getItem('ratingValue'));
+        totalStars = parseFloat(localStorage.getItem('totalStars'));
+        ratingCount = parseInt(localStorage.getItem('ratingCount'));
+        updateRatingValue();
+    }
+
+    // Hàm để cập nhật dữ liệu vào localStorage một cách an toàn
+    function updateLocalStorage(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {
+            // Xử lý nếu localStorage không khả dụng hoặc đã đầy
+            console.error('LocalStorage is not available or full.');
+        }
+    }
+
+    function rateStar(star) {
+        totalStars += star;
+        ratingCount++;
+        currentRating = totalStars / ratingCount;
+        highlightStars(star);
+        updateRatingValue();
+        // Lưu trữ kết quả vào Local Storage
+        updateLocalStorage('ratingValue', currentRating);
+        updateLocalStorage('totalStars', totalStars);
+        updateLocalStorage('ratingCount', ratingCount);
+    }
+
+    function highlightStars(star) {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((s, index) => {
+            if (index < star) {
+                s.classList.add('active');
+            } else {
+                s.classList.remove('active');
+            }
+        });
+    }
+
+    function updateRatingValue() {
+        document.getElementById('ratingValue').textContent = currentRating.toFixed(1);
+    }
+
+    // Hàm cập nhật số lần truy cập và hiển thị lên trang
+    function updateVisitCount() {
+        // Kiểm tra xem nếu đã lưu trữ dữ liệu trong localStorage
+        if (localStorage.getItem('visitCount')) {
+            // Nếu đã tồn tại, tăng giá trị lên 1
+            let visitCount = parseInt(localStorage.getItem('visitCount'));
+            visitCount++;
+            updateLocalStorage('visitCount', visitCount);
+        } else {
+            // Nếu chưa tồn tại, đặt giá trị là 1
+            updateLocalStorage('visitCount', 1);
+        }
+        // Hiển thị giá trị lên trang web
+        document.getElementById('visitCount').innerText = localStorage.getItem('visitCount');
+    }
+
+    // Hàm được gọi khi trang web được tải hoàn toàn
+    function pageLoaded() {
+        updateVisitCount(); // Cập nhật số lần truy cập khi trang được tải
+    }
+
+    // Gọi hàm cập nhật số lần truy cập sau mỗi lần làm mới trang web
+    window.addEventListener('load', updateVisitCount);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Thực hiện cập nhật số lượt theo dõi khi trang được tải
+        const followBtns = document.querySelectorAll("[id^='follow-btn']");
+        followBtns.forEach(btn => {
+            const btnId = btn.id.replace("follow-btn", "");
+            updateFollowerCount(btnId);
+        });
+    });
+
+    function updateFollowerCount(btnId) {
+        const count = getFollowerCount(btnId);
+        document.getElementById("followCount" + btnId).innerText = count;
+    }
+
+    function getFollowerCount(btnId) {
+        const count = localStorage.getItem("followerCount_" + btnId);
+        return count === null ? 0 : parseInt(count);
+    }
+
+    function setFollowerCount(btnId, count) {
+        localStorage.setItem("followerCount_" + btnId, count);
+    }
+
+    function setFollowingState(btnId, isFollowing) {
+        localStorage.setItem("followingState_" + btnId, isFollowing);
+    }
+
+    function getFollowingState(btnId) {
+        const state = localStorage.getItem("followingState_" + btnId);
+        return state === "true";
+    }
+
+    function toggleFollow(btnId) {
+        const followBtn = document.getElementById("follow-btn" + btnId);
+        let isFollowing = getFollowingState(btnId);
+        let followerCount = getFollowerCount(btnId);
+
+        if (isFollowing) {
+            followBtn.innerText = "Theo dõi";
+            followBtn.classList.remove("following");
+            followerCount--;
+        } else {
+            followBtn.innerText = "Bỏ theo dõi";
+            followBtn.classList.add("following");
+            followerCount++;
+        }
+
+        setFollowingState(btnId, !isFollowing);
+        setFollowerCount(btnId, followerCount);
+
+        updateFollowerCount(btnId);
+    }
+</script>
+
+<footer class="footer">
+  <div class="container-footer">
+      <div class="row-footer">
+         <div class="footer-col">
+          <a href="https://cyan-florentine-ginger.glitch.me/">
+            <img src="https://cdn.glitch.global/c2c72d3d-385b-4ce0-afb8-3225dc1ee39c/logo%20mtt%201.png?v=1712059288320" alt="" title="Moonstone Team" width="100%" height="70px" margin-right="10px">
+           </a>
+          </div>
+          <div class="footer-col">
+            <h3>Bản quyền</h3>
+              <ul>
+               <li><a href ="https://long-lemon-echinodon.glitch.me/">Đối với các tác phẩm gốc</a></li>
+               <li><a href ="https://juicy-respected-basilisk.glitch.me/">Đối với các tác phẩm dịch thuật</a></li>
+              </ul>
+           </div>
+           <div class="footer-col">
+             <h3>nội quy website</h3>
+               <ul>
+                <li><a href ="https://elastic-abyssinian-scowl.glitch.me/">Các quy định chung</a></li>
+                <li><a href ="https://fishy-shrub-mole.glitch.me/">Quy định về đăng truyện</a></li>
+                <li><a href ="https://holly-mud-algebra.glitch.me/">Quy định về nội dung</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+              <h3>theo dõi chúng tôi</h3>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/MoonstoneTeam"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+       <div class="copyright-txt">  
+          © 2024 <a href="https://cyan-florentine-ginger.glitch.me/">Moonstone Team</a>
+        </div>
+    </div>
+</footer>
+
+</body>  
+</html>
